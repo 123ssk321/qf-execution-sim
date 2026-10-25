@@ -1,0 +1,471 @@
+{
+  "project_slug": "execution-sim",
+  "first_public_result_month": 4,
+  "total_hours": 312,
+  "reserve_hours": 120,
+  "status": "queued",
+  "milestones": [
+    {
+      "id": "QE-M1",
+      "title": "Scope and simulation contract",
+      "description": "Relative to explicit activation: Months 1–2; 32 task hours + 20 reserve; cumulative 52 hours. Tasks QE-001–QE-004. Exit requires reviewed evidence for each task and a continue/narrow/park decision. Dates stay blank while queued.",
+      "window": "Months 1–2",
+      "work_hours": 32,
+      "reserve_hours": 20,
+      "cumulative_hours": 52
+    },
+    {
+      "id": "QE-M2",
+      "title": "Baselines and path engine",
+      "description": "Relative to explicit activation: Months 1–2; 32 task hours + 20 reserve; cumulative 104 hours. Tasks QE-005–QE-008. Exit requires reviewed evidence for each task and a continue/narrow/park decision. Dates stay blank while queued.",
+      "window": "Months 1–2",
+      "work_hours": 32,
+      "reserve_hours": 20,
+      "cumulative_hours": 104
+    },
+    {
+      "id": "QE-M3",
+      "title": "First public comparison alpha",
+      "description": "Relative to explicit activation: Month 4; 32 task hours + 20 reserve; cumulative 156 hours. Tasks QE-009–QE-012. Exit requires reviewed evidence for each task and a continue/narrow/park decision. Dates stay blank while queued.",
+      "window": "Month 4",
+      "work_hours": 32,
+      "reserve_hours": 20,
+      "cumulative_hours": 156
+    },
+    {
+      "id": "QE-M4",
+      "title": "Impact and uncertainty tests",
+      "description": "Relative to explicit activation: Months 5–7; 32 task hours + 20 reserve; cumulative 208 hours. Tasks QE-013–QE-016. Exit requires reviewed evidence for each task and a continue/narrow/park decision. Dates stay blank while queued.",
+      "window": "Months 5–7",
+      "work_hours": 32,
+      "reserve_hours": 20,
+      "cumulative_hours": 208
+    },
+    {
+      "id": "QE-M5",
+      "title": "Usable research interface",
+      "description": "Relative to explicit activation: Months 6–8; 32 task hours + 20 reserve; cumulative 260 hours. Tasks QE-017–QE-020. Exit requires reviewed evidence for each task and a continue/narrow/park decision. Dates stay blank while queued.",
+      "window": "Months 6–8",
+      "work_hours": 32,
+      "reserve_hours": 20,
+      "cumulative_hours": 260
+    },
+    {
+      "id": "QE-M6",
+      "title": "Reproducible case study and decision",
+      "description": "Relative to explicit activation: Months 7–9; 32 task hours + 20 reserve; cumulative 312 hours. Tasks QE-021–QE-024. Exit requires reviewed evidence for each task and a continue/narrow/park decision. Dates stay blank while queued.",
+      "window": "Months 7–9",
+      "work_hours": 32,
+      "reserve_hours": 20,
+      "cumulative_hours": 312
+    }
+  ],
+  "issues": [
+    {
+      "id": "QE-001",
+      "title": "Define order and benchmark contract",
+      "body": "## Goal\nDefine order and benchmark contract for Execution Scenario Lab, within 8 hours including checks and documentation.\n\n## Steps\n1. Specify side, size, arrival price, time horizon and shortfall sign.\n2. Check the product boundary: Compare declared execution schedules under explicit price, spread and impact assumptions. Model-implied shortfall is distinct from realized broker execution; the tool does not claim optimal live fills.\n3. Record exact commands, versions, seeds, input hashes, failures and actual time.\n\n## Outputs\nFuture repository artifact: `docs/CONTRACT.md`. This planning issue does not claim the artifact exists.\n\n## Acceptance checks\nAll quantities and benchmark timestamps are fixed. Evidence includes a reproducible command or reviewable document; no result is manufactured during planning.\n\n## Dependencies\nNone beyond activation. Read docs/EXECUTION_PLAN.md and docs/IMPLEMENTER_PROTOCOL.md. Prior milestone exits must pass; this candidate remains queued.\n\n## Review evidence\nAttach the reviewed diff, exact commands and exit codes, relevant report excerpts, input/config hashes, actual hours and reserve draw. Separate measured outcomes from targets. Done requires review and merge.\n\n## Blocker procedure\nRecord the smallest failure and missing prerequisite. Keep dependents queued. Use reserve or propose a narrower scope. Unknown rights block distribution; use generated fallback. Escalate budget, intended-use or release changes before crossing them.",
+      "estimate_hours": 8,
+      "milestone": "QE-M1",
+      "depends_on": [],
+      "labels": [
+        "type:task",
+        "priority:P1",
+        "status:queued",
+        "phase:definition"
+      ],
+      "phase": "definition"
+    },
+    {
+      "id": "QE-002",
+      "title": "Specify simulator assumptions",
+      "body": "## Goal\nSpecify simulator assumptions for Execution Scenario Lab, within 8 hours including checks and documentation.\n\n## Steps\n1. List price, spread, impact and volume processes with units.\n2. Check the product boundary: Compare declared execution schedules under explicit price, spread and impact assumptions. Model-implied shortfall is distinct from realized broker execution; the tool does not claim optimal live fills.\n3. Record exact commands, versions, seeds, input hashes, failures and actual time.\n\n## Outputs\nFuture repository artifact: `docs/MODEL.md`. This planning issue does not claim the artifact exists.\n\n## Acceptance checks\nEvery modeled effect is labeled synthetic. Evidence includes a reproducible command or reviewable document; no result is manufactured during planning.\n\n## Dependencies\nQE-001 Read docs/EXECUTION_PLAN.md and docs/IMPLEMENTER_PROTOCOL.md. Prior milestone exits must pass; this candidate remains queued.\n\n## Review evidence\nAttach the reviewed diff, exact commands and exit codes, relevant report excerpts, input/config hashes, actual hours and reserve draw. Separate measured outcomes from targets. Done requires review and merge.\n\n## Blocker procedure\nRecord the smallest failure and missing prerequisite. Keep dependents queued. Use reserve or propose a narrower scope. Unknown rights block distribution; use generated fallback. Escalate budget, intended-use or release changes before crossing them.",
+      "estimate_hours": 8,
+      "milestone": "QE-M1",
+      "depends_on": [
+        "QE-001"
+      ],
+      "labels": [
+        "type:task",
+        "priority:P1",
+        "status:queued",
+        "phase:definition"
+      ],
+      "phase": "definition"
+    },
+    {
+      "id": "QE-003",
+      "title": "Record input rights",
+      "body": "## Goal\nRecord input rights for Execution Scenario Lab, within 8 hours including checks and documentation.\n\n## Steps\n1. Inspect public volume options and synthetic fallback.\n2. Check the product boundary: Compare declared execution schedules under explicit price, spread and impact assumptions. Model-implied shortfall is distinct from realized broker execution; the tool does not claim optimal live fills.\n3. Record exact commands, versions, seeds, input hashes, failures and actual time.\n\n## Outputs\nFuture repository artifact: `docs/DATA_RIGHTS.md`. This planning issue does not claim the artifact exists.\n\n## Acceptance checks\nNo vendor bars are redistributed without rights. Evidence includes a reproducible command or reviewable document; no result is manufactured during planning.\n\n## Dependencies\nQE-002 Read docs/EXECUTION_PLAN.md and docs/IMPLEMENTER_PROTOCOL.md. Prior milestone exits must pass; this candidate remains queued.\n\n## Review evidence\nAttach the reviewed diff, exact commands and exit codes, relevant report excerpts, input/config hashes, actual hours and reserve draw. Separate measured outcomes from targets. Done requires review and merge.\n\n## Blocker procedure\nRecord the smallest failure and missing prerequisite. Keep dependents queued. Use reserve or propose a narrower scope. Unknown rights block distribution; use generated fallback. Escalate budget, intended-use or release changes before crossing them.",
+      "estimate_hours": 8,
+      "milestone": "QE-M1",
+      "depends_on": [
+        "QE-002"
+      ],
+      "labels": [
+        "type:task",
+        "priority:P1",
+        "status:queued",
+        "phase:definition"
+      ],
+      "phase": "definition"
+    },
+    {
+      "id": "QE-004",
+      "title": "Define runtime budget",
+      "body": "## Goal\nDefine runtime budget for Execution Scenario Lab, within 8 hours including checks and documentation.\n\n## Steps\n1. Cap path count, order size and local resource use.\n2. Check the product boundary: Compare declared execution schedules under explicit price, spread and impact assumptions. Model-implied shortfall is distinct from realized broker execution; the tool does not claim optimal live fills.\n3. Record exact commands, versions, seeds, input hashes, failures and actual time.\n\n## Outputs\nFuture repository artifact: `docs/RESOURCE_BUDGET.md`. This planning issue does not claim the artifact exists.\n\n## Acceptance checks\nSmoke scenario fits laptop budget. Evidence includes a reproducible command or reviewable document; no result is manufactured during planning.\n\n## Dependencies\nQE-003 Read docs/EXECUTION_PLAN.md and docs/IMPLEMENTER_PROTOCOL.md. Prior milestone exits must pass; this candidate remains queued.\n\n## Review evidence\nAttach the reviewed diff, exact commands and exit codes, relevant report excerpts, input/config hashes, actual hours and reserve draw. Separate measured outcomes from targets. Done requires review and merge.\n\n## Blocker procedure\nRecord the smallest failure and missing prerequisite. Keep dependents queued. Use reserve or propose a narrower scope. Unknown rights block distribution; use generated fallback. Escalate budget, intended-use or release changes before crossing them.",
+      "estimate_hours": 8,
+      "milestone": "QE-M1",
+      "depends_on": [
+        "QE-003"
+      ],
+      "labels": [
+        "type:task",
+        "priority:P1",
+        "status:queued",
+        "phase:definition"
+      ],
+      "phase": "definition"
+    },
+    {
+      "id": "QE-005",
+      "title": "Generate seeded market paths",
+      "body": "## Goal\nGenerate seeded market paths for Execution Scenario Lab, within 8 hours including checks and documentation.\n\n## Steps\n1. Create price, spread and volume series with known parameters.\n2. Check the product boundary: Compare declared execution schedules under explicit price, spread and impact assumptions. Model-implied shortfall is distinct from realized broker execution; the tool does not claim optimal live fills.\n3. Record exact commands, versions, seeds, input hashes, failures and actual time.\n\n## Outputs\nFuture repository artifact: `src/paths.py`. This planning issue does not claim the artifact exists.\n\n## Acceptance checks\nSeeds reproduce all paths and truths. Evidence includes a reproducible command or reviewable document; no result is manufactured during planning.\n\n## Dependencies\nQE-004 Read docs/EXECUTION_PLAN.md and docs/IMPLEMENTER_PROTOCOL.md. Prior milestone exits must pass; this candidate remains queued.\n\n## Review evidence\nAttach the reviewed diff, exact commands and exit codes, relevant report excerpts, input/config hashes, actual hours and reserve draw. Separate measured outcomes from targets. Done requires review and merge.\n\n## Blocker procedure\nRecord the smallest failure and missing prerequisite. Keep dependents queued. Use reserve or propose a narrower scope. Unknown rights block distribution; use generated fallback. Escalate budget, intended-use or release changes before crossing them.",
+      "estimate_hours": 8,
+      "milestone": "QE-M2",
+      "depends_on": [
+        "QE-004"
+      ],
+      "labels": [
+        "type:task",
+        "priority:P1",
+        "status:queued",
+        "phase:prototype"
+      ],
+      "phase": "prototype"
+    },
+    {
+      "id": "QE-006",
+      "title": "Implement inventory ledger",
+      "body": "## Goal\nImplement inventory ledger for Execution Scenario Lab, within 8 hours including checks and documentation.\n\n## Steps\n1. Track remaining order and fills through slices.\n2. Check the product boundary: Compare declared execution schedules under explicit price, spread and impact assumptions. Model-implied shortfall is distinct from realized broker execution; the tool does not claim optimal live fills.\n3. Record exact commands, versions, seeds, input hashes, failures and actual time.\n\n## Outputs\nFuture repository artifact: `src/ledger.py`. This planning issue does not claim the artifact exists.\n\n## Acceptance checks\nExecuted plus remaining equals initial quantity. Evidence includes a reproducible command or reviewable document; no result is manufactured during planning.\n\n## Dependencies\nQE-005 Read docs/EXECUTION_PLAN.md and docs/IMPLEMENTER_PROTOCOL.md. Prior milestone exits must pass; this candidate remains queued.\n\n## Review evidence\nAttach the reviewed diff, exact commands and exit codes, relevant report excerpts, input/config hashes, actual hours and reserve draw. Separate measured outcomes from targets. Done requires review and merge.\n\n## Blocker procedure\nRecord the smallest failure and missing prerequisite. Keep dependents queued. Use reserve or propose a narrower scope. Unknown rights block distribution; use generated fallback. Escalate budget, intended-use or release changes before crossing them.",
+      "estimate_hours": 8,
+      "milestone": "QE-M2",
+      "depends_on": [
+        "QE-005"
+      ],
+      "labels": [
+        "type:task",
+        "priority:P1",
+        "status:queued",
+        "phase:prototype"
+      ],
+      "phase": "prototype"
+    },
+    {
+      "id": "QE-007",
+      "title": "Implement TWAP baseline",
+      "body": "## Goal\nImplement TWAP baseline for Execution Scenario Lab, within 8 hours including checks and documentation.\n\n## Steps\n1. Allocate schedule over declared slices with volume caps.\n2. Check the product boundary: Compare declared execution schedules under explicit price, spread and impact assumptions. Model-implied shortfall is distinct from realized broker execution; the tool does not claim optimal live fills.\n3. Record exact commands, versions, seeds, input hashes, failures and actual time.\n\n## Outputs\nFuture repository artifact: `src/twap.py`. This planning issue does not claim the artifact exists.\n\n## Acceptance checks\nSlice quantities sum to requested size when feasible. Evidence includes a reproducible command or reviewable document; no result is manufactured during planning.\n\n## Dependencies\nQE-006 Read docs/EXECUTION_PLAN.md and docs/IMPLEMENTER_PROTOCOL.md. Prior milestone exits must pass; this candidate remains queued.\n\n## Review evidence\nAttach the reviewed diff, exact commands and exit codes, relevant report excerpts, input/config hashes, actual hours and reserve draw. Separate measured outcomes from targets. Done requires review and merge.\n\n## Blocker procedure\nRecord the smallest failure and missing prerequisite. Keep dependents queued. Use reserve or propose a narrower scope. Unknown rights block distribution; use generated fallback. Escalate budget, intended-use or release changes before crossing them.",
+      "estimate_hours": 8,
+      "milestone": "QE-M2",
+      "depends_on": [
+        "QE-006"
+      ],
+      "labels": [
+        "type:task",
+        "priority:P1",
+        "status:queued",
+        "phase:prototype"
+      ],
+      "phase": "prototype"
+    },
+    {
+      "id": "QE-008",
+      "title": "Implement volume schedule baseline",
+      "body": "## Goal\nImplement volume schedule baseline for Execution Scenario Lab, within 8 hours including checks and documentation.\n\n## Steps\n1. Use only historical profile estimates known at decision time.\n2. Check the product boundary: Compare declared execution schedules under explicit price, spread and impact assumptions. Model-implied shortfall is distinct from realized broker execution; the tool does not claim optimal live fills.\n3. Record exact commands, versions, seeds, input hashes, failures and actual time.\n\n## Outputs\nFuture repository artifact: `src/vwap.py`. This planning issue does not claim the artifact exists.\n\n## Acceptance checks\nFuture realized volume cannot enter planned schedule. Evidence includes a reproducible command or reviewable document; no result is manufactured during planning.\n\n## Dependencies\nQE-007 Read docs/EXECUTION_PLAN.md and docs/IMPLEMENTER_PROTOCOL.md. Prior milestone exits must pass; this candidate remains queued.\n\n## Review evidence\nAttach the reviewed diff, exact commands and exit codes, relevant report excerpts, input/config hashes, actual hours and reserve draw. Separate measured outcomes from targets. Done requires review and merge.\n\n## Blocker procedure\nRecord the smallest failure and missing prerequisite. Keep dependents queued. Use reserve or propose a narrower scope. Unknown rights block distribution; use generated fallback. Escalate budget, intended-use or release changes before crossing them.",
+      "estimate_hours": 8,
+      "milestone": "QE-M2",
+      "depends_on": [
+        "QE-007"
+      ],
+      "labels": [
+        "type:task",
+        "priority:P1",
+        "status:queued",
+        "phase:prototype"
+      ],
+      "phase": "prototype"
+    },
+    {
+      "id": "QE-009",
+      "title": "Implement AC trajectory",
+      "body": "## Goal\nImplement AC trajectory for Execution Scenario Lab, within 8 hours including checks and documentation.\n\n## Steps\n1. Solve bounded model and check limiting cases.\n2. Check the product boundary: Compare declared execution schedules under explicit price, spread and impact assumptions. Model-implied shortfall is distinct from realized broker execution; the tool does not claim optimal live fills.\n3. Record exact commands, versions, seeds, input hashes, failures and actual time.\n\n## Outputs\nFuture repository artifact: `src/ac.py`. This planning issue does not claim the artifact exists.\n\n## Acceptance checks\nTrajectory matches independent derivation fixtures. Evidence includes a reproducible command or reviewable document; no result is manufactured during planning.\n\n## Dependencies\nQE-008 Read docs/EXECUTION_PLAN.md and docs/IMPLEMENTER_PROTOCOL.md. Prior milestone exits must pass; this candidate remains queued.\n\n## Review evidence\nAttach the reviewed diff, exact commands and exit codes, relevant report excerpts, input/config hashes, actual hours and reserve draw. Separate measured outcomes from targets. Done requires review and merge.\n\n## Blocker procedure\nRecord the smallest failure and missing prerequisite. Keep dependents queued. Use reserve or propose a narrower scope. Unknown rights block distribution; use generated fallback. Escalate budget, intended-use or release changes before crossing them.",
+      "estimate_hours": 8,
+      "milestone": "QE-M3",
+      "depends_on": [
+        "QE-008"
+      ],
+      "labels": [
+        "type:task",
+        "priority:P1",
+        "status:queued",
+        "phase:public-alpha"
+      ],
+      "phase": "public-alpha"
+    },
+    {
+      "id": "QE-010",
+      "title": "Implement common fill simulator",
+      "body": "## Goal\nImplement common fill simulator for Execution Scenario Lab, within 8 hours including checks and documentation.\n\n## Steps\n1. Apply one declared cost model to all schedules.\n2. Check the product boundary: Compare declared execution schedules under explicit price, spread and impact assumptions. Model-implied shortfall is distinct from realized broker execution; the tool does not claim optimal live fills.\n3. Record exact commands, versions, seeds, input hashes, failures and actual time.\n\n## Outputs\nFuture repository artifact: `src/fills.py`. This planning issue does not claim the artifact exists.\n\n## Acceptance checks\nBaseline comparison uses identical paths and constraints. Evidence includes a reproducible command or reviewable document; no result is manufactured during planning.\n\n## Dependencies\nQE-009 Read docs/EXECUTION_PLAN.md and docs/IMPLEMENTER_PROTOCOL.md. Prior milestone exits must pass; this candidate remains queued.\n\n## Review evidence\nAttach the reviewed diff, exact commands and exit codes, relevant report excerpts, input/config hashes, actual hours and reserve draw. Separate measured outcomes from targets. Done requires review and merge.\n\n## Blocker procedure\nRecord the smallest failure and missing prerequisite. Keep dependents queued. Use reserve or propose a narrower scope. Unknown rights block distribution; use generated fallback. Escalate budget, intended-use or release changes before crossing them.",
+      "estimate_hours": 8,
+      "milestone": "QE-M3",
+      "depends_on": [
+        "QE-009"
+      ],
+      "labels": [
+        "type:task",
+        "priority:P1",
+        "status:queued",
+        "phase:public-alpha"
+      ],
+      "phase": "public-alpha"
+    },
+    {
+      "id": "QE-011",
+      "title": "Report shortfall metrics",
+      "body": "## Goal\nReport shortfall metrics for Execution Scenario Lab, within 8 hours including checks and documentation.\n\n## Steps\n1. Compute cost, variance and residual inventory with signs.\n2. Check the product boundary: Compare declared execution schedules under explicit price, spread and impact assumptions. Model-implied shortfall is distinct from realized broker execution; the tool does not claim optimal live fills.\n3. Record exact commands, versions, seeds, input hashes, failures and actual time.\n\n## Outputs\nFuture repository artifact: `src/metrics.py`. This planning issue does not claim the artifact exists.\n\n## Acceptance checks\nKnown toy trades have exact expected metrics. Evidence includes a reproducible command or reviewable document; no result is manufactured during planning.\n\n## Dependencies\nQE-010 Read docs/EXECUTION_PLAN.md and docs/IMPLEMENTER_PROTOCOL.md. Prior milestone exits must pass; this candidate remains queued.\n\n## Review evidence\nAttach the reviewed diff, exact commands and exit codes, relevant report excerpts, input/config hashes, actual hours and reserve draw. Separate measured outcomes from targets. Done requires review and merge.\n\n## Blocker procedure\nRecord the smallest failure and missing prerequisite. Keep dependents queued. Use reserve or propose a narrower scope. Unknown rights block distribution; use generated fallback. Escalate budget, intended-use or release changes before crossing them.",
+      "estimate_hours": 8,
+      "milestone": "QE-M3",
+      "depends_on": [
+        "QE-010"
+      ],
+      "labels": [
+        "type:task",
+        "priority:P1",
+        "status:queued",
+        "phase:public-alpha"
+      ],
+      "phase": "public-alpha"
+    },
+    {
+      "id": "QE-012",
+      "title": "Publish first comparison",
+      "body": "## Goal\nPublish first comparison for Execution Scenario Lab, within 8 hours including checks and documentation.\n\n## Steps\n1. Release reproducible three-schedule demo and assumptions.\n2. Check the product boundary: Compare declared execution schedules under explicit price, spread and impact assumptions. Model-implied shortfall is distinct from realized broker execution; the tool does not claim optimal live fills.\n3. Record exact commands, versions, seeds, input hashes, failures and actual time.\n\n## Outputs\nFuture repository artifact: `reports/alpha.md`. This planning issue does not claim the artifact exists.\n\n## Acceptance checks\nPublic result states simulation-only evidence. Evidence includes a reproducible command or reviewable document; no result is manufactured during planning.\n\n## Dependencies\nQE-011 Read docs/EXECUTION_PLAN.md and docs/IMPLEMENTER_PROTOCOL.md. Prior milestone exits must pass; this candidate remains queued.\n\n## Review evidence\nAttach the reviewed diff, exact commands and exit codes, relevant report excerpts, input/config hashes, actual hours and reserve draw. Separate measured outcomes from targets. Done requires review and merge.\n\n## Blocker procedure\nRecord the smallest failure and missing prerequisite. Keep dependents queued. Use reserve or propose a narrower scope. Unknown rights block distribution; use generated fallback. Escalate budget, intended-use or release changes before crossing them.",
+      "estimate_hours": 8,
+      "milestone": "QE-M3",
+      "depends_on": [
+        "QE-011"
+      ],
+      "labels": [
+        "type:task",
+        "priority:P1",
+        "status:queued",
+        "phase:public-alpha"
+      ],
+      "phase": "public-alpha"
+    },
+    {
+      "id": "QE-013",
+      "title": "Sweep risk aversion",
+      "body": "## Goal\nSweep risk aversion for Execution Scenario Lab, within 8 hours including checks and documentation.\n\n## Steps\n1. Trace cost-risk frontier under fixed parameters.\n2. Check the product boundary: Compare declared execution schedules under explicit price, spread and impact assumptions. Model-implied shortfall is distinct from realized broker execution; the tool does not claim optimal live fills.\n3. Record exact commands, versions, seeds, input hashes, failures and actual time.\n\n## Outputs\nFuture repository artifact: `reports/frontier.md`. This planning issue does not claim the artifact exists.\n\n## Acceptance checks\nDominance conclusions use matched constraints. Evidence includes a reproducible command or reviewable document; no result is manufactured during planning.\n\n## Dependencies\nQE-012 Read docs/EXECUTION_PLAN.md and docs/IMPLEMENTER_PROTOCOL.md. Prior milestone exits must pass; this candidate remains queued.\n\n## Review evidence\nAttach the reviewed diff, exact commands and exit codes, relevant report excerpts, input/config hashes, actual hours and reserve draw. Separate measured outcomes from targets. Done requires review and merge.\n\n## Blocker procedure\nRecord the smallest failure and missing prerequisite. Keep dependents queued. Use reserve or propose a narrower scope. Unknown rights block distribution; use generated fallback. Escalate budget, intended-use or release changes before crossing them.",
+      "estimate_hours": 8,
+      "milestone": "QE-M4",
+      "depends_on": [
+        "QE-012"
+      ],
+      "labels": [
+        "type:task",
+        "priority:P2",
+        "status:queued",
+        "phase:evaluation"
+      ],
+      "phase": "evaluation"
+    },
+    {
+      "id": "QE-014",
+      "title": "Stress volume forecast",
+      "body": "## Goal\nStress volume forecast for Execution Scenario Lab, within 8 hours including checks and documentation.\n\n## Steps\n1. Vary realized profile against prior forecast.\n2. Check the product boundary: Compare declared execution schedules under explicit price, spread and impact assumptions. Model-implied shortfall is distinct from realized broker execution; the tool does not claim optimal live fills.\n3. Record exact commands, versions, seeds, input hashes, failures and actual time.\n\n## Outputs\nFuture repository artifact: `reports/volume-shift.md`. This planning issue does not claim the artifact exists.\n\n## Acceptance checks\nError levels and path counts are shown. Evidence includes a reproducible command or reviewable document; no result is manufactured during planning.\n\n## Dependencies\nQE-013 Read docs/EXECUTION_PLAN.md and docs/IMPLEMENTER_PROTOCOL.md. Prior milestone exits must pass; this candidate remains queued.\n\n## Review evidence\nAttach the reviewed diff, exact commands and exit codes, relevant report excerpts, input/config hashes, actual hours and reserve draw. Separate measured outcomes from targets. Done requires review and merge.\n\n## Blocker procedure\nRecord the smallest failure and missing prerequisite. Keep dependents queued. Use reserve or propose a narrower scope. Unknown rights block distribution; use generated fallback. Escalate budget, intended-use or release changes before crossing them.",
+      "estimate_hours": 8,
+      "milestone": "QE-M4",
+      "depends_on": [
+        "QE-013"
+      ],
+      "labels": [
+        "type:task",
+        "priority:P2",
+        "status:queued",
+        "phase:evaluation"
+      ],
+      "phase": "evaluation"
+    },
+    {
+      "id": "QE-015",
+      "title": "Stress impact parameter",
+      "body": "## Goal\nStress impact parameter for Execution Scenario Lab, within 8 hours including checks and documentation.\n\n## Steps\n1. Vary temporary and permanent impact independently.\n2. Check the product boundary: Compare declared execution schedules under explicit price, spread and impact assumptions. Model-implied shortfall is distinct from realized broker execution; the tool does not claim optimal live fills.\n3. Record exact commands, versions, seeds, input hashes, failures and actual time.\n\n## Outputs\nFuture repository artifact: `reports/impact-shift.md`. This planning issue does not claim the artifact exists.\n\n## Acceptance checks\nModel mismatch reversals are disclosed. Evidence includes a reproducible command or reviewable document; no result is manufactured during planning.\n\n## Dependencies\nQE-014 Read docs/EXECUTION_PLAN.md and docs/IMPLEMENTER_PROTOCOL.md. Prior milestone exits must pass; this candidate remains queued.\n\n## Review evidence\nAttach the reviewed diff, exact commands and exit codes, relevant report excerpts, input/config hashes, actual hours and reserve draw. Separate measured outcomes from targets. Done requires review and merge.\n\n## Blocker procedure\nRecord the smallest failure and missing prerequisite. Keep dependents queued. Use reserve or propose a narrower scope. Unknown rights block distribution; use generated fallback. Escalate budget, intended-use or release changes before crossing them.",
+      "estimate_hours": 8,
+      "milestone": "QE-M4",
+      "depends_on": [
+        "QE-014"
+      ],
+      "labels": [
+        "type:task",
+        "priority:P2",
+        "status:queued",
+        "phase:evaluation"
+      ],
+      "phase": "evaluation"
+    },
+    {
+      "id": "QE-016",
+      "title": "Inspect unfavorable cases",
+      "body": "## Goal\nInspect unfavorable cases for Execution Scenario Lab, within 8 hours including checks and documentation.\n\n## Steps\n1. Find paths where AC loses to TWAP or volume schedule.\n2. Check the product boundary: Compare declared execution schedules under explicit price, spread and impact assumptions. Model-implied shortfall is distinct from realized broker execution; the tool does not claim optimal live fills.\n3. Record exact commands, versions, seeds, input hashes, failures and actual time.\n\n## Outputs\nFuture repository artifact: `reports/failures.md`. This planning issue does not claim the artifact exists.\n\n## Acceptance checks\nFailure cases include seed and configuration. Evidence includes a reproducible command or reviewable document; no result is manufactured during planning.\n\n## Dependencies\nQE-015 Read docs/EXECUTION_PLAN.md and docs/IMPLEMENTER_PROTOCOL.md. Prior milestone exits must pass; this candidate remains queued.\n\n## Review evidence\nAttach the reviewed diff, exact commands and exit codes, relevant report excerpts, input/config hashes, actual hours and reserve draw. Separate measured outcomes from targets. Done requires review and merge.\n\n## Blocker procedure\nRecord the smallest failure and missing prerequisite. Keep dependents queued. Use reserve or propose a narrower scope. Unknown rights block distribution; use generated fallback. Escalate budget, intended-use or release changes before crossing them.",
+      "estimate_hours": 8,
+      "milestone": "QE-M4",
+      "depends_on": [
+        "QE-015"
+      ],
+      "labels": [
+        "type:task",
+        "priority:P2",
+        "status:queued",
+        "phase:evaluation"
+      ],
+      "phase": "evaluation"
+    },
+    {
+      "id": "QE-017",
+      "title": "Add partial-fill behavior",
+      "body": "## Goal\nAdd partial-fill behavior for Execution Scenario Lab, within 8 hours including checks and documentation.\n\n## Steps\n1. Handle volume caps and residual inventory consistently.\n2. Check the product boundary: Compare declared execution schedules under explicit price, spread and impact assumptions. Model-implied shortfall is distinct from realized broker execution; the tool does not claim optimal live fills.\n3. Record exact commands, versions, seeds, input hashes, failures and actual time.\n\n## Outputs\nFuture repository artifact: `tests/test_partial_fill.py`. This planning issue does not claim the artifact exists.\n\n## Acceptance checks\nNo fill exceeds capacity or remaining order. Evidence includes a reproducible command or reviewable document; no result is manufactured during planning.\n\n## Dependencies\nQE-016 Read docs/EXECUTION_PLAN.md and docs/IMPLEMENTER_PROTOCOL.md. Prior milestone exits must pass; this candidate remains queued.\n\n## Review evidence\nAttach the reviewed diff, exact commands and exit codes, relevant report excerpts, input/config hashes, actual hours and reserve draw. Separate measured outcomes from targets. Done requires review and merge.\n\n## Blocker procedure\nRecord the smallest failure and missing prerequisite. Keep dependents queued. Use reserve or propose a narrower scope. Unknown rights block distribution; use generated fallback. Escalate budget, intended-use or release changes before crossing them.",
+      "estimate_hours": 8,
+      "milestone": "QE-M5",
+      "depends_on": [
+        "QE-016"
+      ],
+      "labels": [
+        "type:task",
+        "priority:P2",
+        "status:queued",
+        "phase:reliability"
+      ],
+      "phase": "reliability"
+    },
+    {
+      "id": "QE-018",
+      "title": "Check stochastic uncertainty",
+      "body": "## Goal\nCheck stochastic uncertainty for Execution Scenario Lab, within 8 hours including checks and documentation.\n\n## Steps\n1. Use paired seeds and uncertainty intervals.\n2. Check the product boundary: Compare declared execution schedules under explicit price, spread and impact assumptions. Model-implied shortfall is distinct from realized broker execution; the tool does not claim optimal live fills.\n3. Record exact commands, versions, seeds, input hashes, failures and actual time.\n\n## Outputs\nFuture repository artifact: `reports/uncertainty.md`. This planning issue does not claim the artifact exists.\n\n## Acceptance checks\nDenominators and confidence method are explicit. Evidence includes a reproducible command or reviewable document; no result is manufactured during planning.\n\n## Dependencies\nQE-017 Read docs/EXECUTION_PLAN.md and docs/IMPLEMENTER_PROTOCOL.md. Prior milestone exits must pass; this candidate remains queued.\n\n## Review evidence\nAttach the reviewed diff, exact commands and exit codes, relevant report excerpts, input/config hashes, actual hours and reserve draw. Separate measured outcomes from targets. Done requires review and merge.\n\n## Blocker procedure\nRecord the smallest failure and missing prerequisite. Keep dependents queued. Use reserve or propose a narrower scope. Unknown rights block distribution; use generated fallback. Escalate budget, intended-use or release changes before crossing them.",
+      "estimate_hours": 8,
+      "milestone": "QE-M5",
+      "depends_on": [
+        "QE-017"
+      ],
+      "labels": [
+        "type:task",
+        "priority:P2",
+        "status:queued",
+        "phase:reliability"
+      ],
+      "phase": "reliability"
+    },
+    {
+      "id": "QE-019",
+      "title": "Add batch research CLI",
+      "body": "## Goal\nAdd batch research CLI for Execution Scenario Lab, within 8 hours including checks and documentation.\n\n## Steps\n1. Run declared scenario matrix and export structured metrics.\n2. Check the product boundary: Compare declared execution schedules under explicit price, spread and impact assumptions. Model-implied shortfall is distinct from realized broker execution; the tool does not claim optimal live fills.\n3. Record exact commands, versions, seeds, input hashes, failures and actual time.\n\n## Outputs\nFuture repository artifact: `src/cli.py`. This planning issue does not claim the artifact exists.\n\n## Acceptance checks\nSingle command recreates comparison table. Evidence includes a reproducible command or reviewable document; no result is manufactured during planning.\n\n## Dependencies\nQE-018 Read docs/EXECUTION_PLAN.md and docs/IMPLEMENTER_PROTOCOL.md. Prior milestone exits must pass; this candidate remains queued.\n\n## Review evidence\nAttach the reviewed diff, exact commands and exit codes, relevant report excerpts, input/config hashes, actual hours and reserve draw. Separate measured outcomes from targets. Done requires review and merge.\n\n## Blocker procedure\nRecord the smallest failure and missing prerequisite. Keep dependents queued. Use reserve or propose a narrower scope. Unknown rights block distribution; use generated fallback. Escalate budget, intended-use or release changes before crossing them.",
+      "estimate_hours": 8,
+      "milestone": "QE-M5",
+      "depends_on": [
+        "QE-018"
+      ],
+      "labels": [
+        "type:task",
+        "priority:P2",
+        "status:queued",
+        "phase:reliability"
+      ],
+      "phase": "reliability"
+    },
+    {
+      "id": "QE-020",
+      "title": "Validate optional volume input",
+      "body": "## Goal\nValidate optional volume input for Execution Scenario Lab, within 8 hours including checks and documentation.\n\n## Steps\n1. Parse permitted bars and flag gaps/time zones.\n2. Check the product boundary: Compare declared execution schedules under explicit price, spread and impact assumptions. Model-implied shortfall is distinct from realized broker execution; the tool does not claim optimal live fills.\n3. Record exact commands, versions, seeds, input hashes, failures and actual time.\n\n## Outputs\nFuture repository artifact: `src/volume_input.py`. This planning issue does not claim the artifact exists.\n\n## Acceptance checks\nInvalid or future profiles are rejected. Evidence includes a reproducible command or reviewable document; no result is manufactured during planning.\n\n## Dependencies\nQE-019 Read docs/EXECUTION_PLAN.md and docs/IMPLEMENTER_PROTOCOL.md. Prior milestone exits must pass; this candidate remains queued.\n\n## Review evidence\nAttach the reviewed diff, exact commands and exit codes, relevant report excerpts, input/config hashes, actual hours and reserve draw. Separate measured outcomes from targets. Done requires review and merge.\n\n## Blocker procedure\nRecord the smallest failure and missing prerequisite. Keep dependents queued. Use reserve or propose a narrower scope. Unknown rights block distribution; use generated fallback. Escalate budget, intended-use or release changes before crossing them.",
+      "estimate_hours": 8,
+      "milestone": "QE-M5",
+      "depends_on": [
+        "QE-019"
+      ],
+      "labels": [
+        "type:task",
+        "priority:P2",
+        "status:queued",
+        "phase:reliability"
+      ],
+      "phase": "reliability"
+    },
+    {
+      "id": "QE-021",
+      "title": "Benchmark local execution",
+      "body": "## Goal\nBenchmark local execution for Execution Scenario Lab, within 8 hours including checks and documentation.\n\n## Steps\n1. Measure path throughput and peak RAM.\n2. Check the product boundary: Compare declared execution schedules under explicit price, spread and impact assumptions. Model-implied shortfall is distinct from realized broker execution; the tool does not claim optimal live fills.\n3. Record exact commands, versions, seeds, input hashes, failures and actual time.\n\n## Outputs\nFuture repository artifact: `benchmarks/local.md`. This planning issue does not claim the artifact exists.\n\n## Acceptance checks\nEnvironment and exact command are recorded. Evidence includes a reproducible command or reviewable document; no result is manufactured during planning.\n\n## Dependencies\nQE-020 Read docs/EXECUTION_PLAN.md and docs/IMPLEMENTER_PROTOCOL.md. Prior milestone exits must pass; this candidate remains queued.\n\n## Review evidence\nAttach the reviewed diff, exact commands and exit codes, relevant report excerpts, input/config hashes, actual hours and reserve draw. Separate measured outcomes from targets. Done requires review and merge.\n\n## Blocker procedure\nRecord the smallest failure and missing prerequisite. Keep dependents queued. Use reserve or propose a narrower scope. Unknown rights block distribution; use generated fallback. Escalate budget, intended-use or release changes before crossing them.",
+      "estimate_hours": 8,
+      "milestone": "QE-M6",
+      "depends_on": [
+        "QE-020"
+      ],
+      "labels": [
+        "type:task",
+        "priority:P2",
+        "status:queued",
+        "phase:release"
+      ],
+      "phase": "release"
+    },
+    {
+      "id": "QE-022",
+      "title": "Document live-data gap",
+      "body": "## Goal\nDocument live-data gap for Execution Scenario Lab, within 8 hours including checks and documentation.\n\n## Steps\n1. List quote, order and fill inputs needed for empirical TCA.\n2. Check the product boundary: Compare declared execution schedules under explicit price, spread and impact assumptions. Model-implied shortfall is distinct from realized broker execution; the tool does not claim optimal live fills.\n3. Record exact commands, versions, seeds, input hashes, failures and actual time.\n\n## Outputs\nFuture repository artifact: `docs/LIMITATIONS.md`. This planning issue does not claim the artifact exists.\n\n## Acceptance checks\nNo simulated gain is framed as observed fill gain. Evidence includes a reproducible command or reviewable document; no result is manufactured during planning.\n\n## Dependencies\nQE-021 Read docs/EXECUTION_PLAN.md and docs/IMPLEMENTER_PROTOCOL.md. Prior milestone exits must pass; this candidate remains queued.\n\n## Review evidence\nAttach the reviewed diff, exact commands and exit codes, relevant report excerpts, input/config hashes, actual hours and reserve draw. Separate measured outcomes from targets. Done requires review and merge.\n\n## Blocker procedure\nRecord the smallest failure and missing prerequisite. Keep dependents queued. Use reserve or propose a narrower scope. Unknown rights block distribution; use generated fallback. Escalate budget, intended-use or release changes before crossing them.",
+      "estimate_hours": 8,
+      "milestone": "QE-M6",
+      "depends_on": [
+        "QE-021"
+      ],
+      "labels": [
+        "type:task",
+        "priority:P2",
+        "status:queued",
+        "phase:release"
+      ],
+      "phase": "release"
+    },
+    {
+      "id": "QE-023",
+      "title": "Write portfolio case study",
+      "body": "## Goal\nWrite portfolio case study for Execution Scenario Lab, within 8 hours including checks and documentation.\n\n## Steps\n1. Explain derivation, baselines, misspecification and failures.\n2. Check the product boundary: Compare declared execution schedules under explicit price, spread and impact assumptions. Model-implied shortfall is distinct from realized broker execution; the tool does not claim optimal live fills.\n3. Record exact commands, versions, seeds, input hashes, failures and actual time.\n\n## Outputs\nFuture repository artifact: `reports/case-study.md`. This planning issue does not claim the artifact exists.\n\n## Acceptance checks\nClaims link to replayable configurations. Evidence includes a reproducible command or reviewable document; no result is manufactured during planning.\n\n## Dependencies\nQE-022 Read docs/EXECUTION_PLAN.md and docs/IMPLEMENTER_PROTOCOL.md. Prior milestone exits must pass; this candidate remains queued.\n\n## Review evidence\nAttach the reviewed diff, exact commands and exit codes, relevant report excerpts, input/config hashes, actual hours and reserve draw. Separate measured outcomes from targets. Done requires review and merge.\n\n## Blocker procedure\nRecord the smallest failure and missing prerequisite. Keep dependents queued. Use reserve or propose a narrower scope. Unknown rights block distribution; use generated fallback. Escalate budget, intended-use or release changes before crossing them.",
+      "estimate_hours": 8,
+      "milestone": "QE-M6",
+      "depends_on": [
+        "QE-022"
+      ],
+      "labels": [
+        "type:task",
+        "priority:P2",
+        "status:queued",
+        "phase:release"
+      ],
+      "phase": "release"
+    },
+    {
+      "id": "QE-024",
+      "title": "Decide product next step",
+      "body": "## Goal\nDecide product next step for Execution Scenario Lab, within 8 hours including checks and documentation.\n\n## Steps\n1. Record narrow user problem and required validation.\n2. Check the product boundary: Compare declared execution schedules under explicit price, spread and impact assumptions. Model-implied shortfall is distinct from realized broker execution; the tool does not claim optimal live fills.\n3. Record exact commands, versions, seeds, input hashes, failures and actual time.\n\n## Outputs\nFuture repository artifact: `docs/PRODUCT_DECISION.md`. This planning issue does not claim the artifact exists.\n\n## Acceptance checks\nDecision distinguishes research tool from broker product. Evidence includes a reproducible command or reviewable document; no result is manufactured during planning.\n\n## Dependencies\nQE-023 Read docs/EXECUTION_PLAN.md and docs/IMPLEMENTER_PROTOCOL.md. Prior milestone exits must pass; this candidate remains queued.\n\n## Review evidence\nAttach the reviewed diff, exact commands and exit codes, relevant report excerpts, input/config hashes, actual hours and reserve draw. Separate measured outcomes from targets. Done requires review and merge.\n\n## Blocker procedure\nRecord the smallest failure and missing prerequisite. Keep dependents queued. Use reserve or propose a narrower scope. Unknown rights block distribution; use generated fallback. Escalate budget, intended-use or release changes before crossing them.",
+      "estimate_hours": 8,
+      "milestone": "QE-M6",
+      "depends_on": [
+        "QE-023"
+      ],
+      "labels": [
+        "type:task",
+        "priority:P2",
+        "status:queued",
+        "phase:release"
+      ],
+      "phase": "release"
+    }
+  ]
+}
