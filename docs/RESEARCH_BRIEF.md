@@ -18,4 +18,8 @@ Matched-risk baseline comparisons, derivation checks, forecast/impact misspecifi
 
 A scenario-analysis or educational tool is plausible; execution-desk value needs quotes, orders and real fill observations. If sophisticated schedules win only under their own calibrated assumptions, retain the simulator and negative findings rather than an optimization claim.
 
-Planning source: quant-finance/QUANT_QUICK_PATHS.md, assessed 19 October 2026. Source links and data cautions are in that report.
+## Source link and evidence caution
+
+The [Almgren–Chriss model paper](https://doi.org/10.21314/JOR.2001.041) provides the execution model foundation. Simulated paths and public volume data can test assumptions and sensitivity; neither validates broker fills or permanent impact.
+
+Planning assessment: 19 October 2026.
